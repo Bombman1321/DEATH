@@ -27,16 +27,17 @@ public class movment : MonoBehaviour
         if (Input.GetKey("a"))
         {
           //  position.Translate(Vector3.left * 0.02f, Space.World);
-            transform.Rotate(Vector3.up * 10f * Time.deltaTime);
+            transform.Rotate(Vector3.up * 60f * Time.deltaTime);
         }
         if (Input.GetKey("s"))
         {
-            position.Translate(Vector3.back * 0.02f, Space.World);
+            //position.Translate(Vector3.back * 0.02f, Space.World);
+            m_Rigidbody.velocity = transform.forward * -0.5f * m_Speed;
         }
         if (Input.GetKey("d"))
         {
            // position.Translate(Vector3.right * 0.02f, Space.World);
-            transform.Rotate(Vector3.up * -10f * Time.deltaTime);
+            transform.Rotate(Vector3.up * -60f * Time.deltaTime);
         }
     }
 }
